@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  cursor: pointer;
+}
+body {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 0px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.showSideBarBtn {
+  font-size: 32px;
+  margin: 40px 20px;
+  border: none;
+  background: transparent;
+  outline: none;
+  transition: all 300ms ease;
+}
+.showSideBarBtn:hover {
+  transform: scale(1.1);
+}
+aside {
+  height: 790px;
+}
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 350px;
+  -webkit-box-shadow: 10px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 10px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 1;
+  transition: all 400ms ease;
+  transform: translateX(-110%);
+}
+.sideBarHeader {
+  display: flex;
+  flex-direction: row;
+}
+
+.sideBarHeader h5 {
+  margin: 0.4rem;
+  font-size: 50px;
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sideBarHeader .cancelSideBar {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  margin-left: 50px;
+  transition: all 300ms ease;
+  outline: none;
+}
+.sideBarHeader .cancelSideBar:hover {
+  transform: rotate(90deg);
+}
+.mainMenu {
+  height: 60%;
+  list-style: none;
+  font-size: 24px;
+  padding-left: 5px;
+  margin-top: -120px;
+}
+.mainMenu li {
+  width: 180px;
+  padding: 5px;
+  margin: 20px 0px;
+  transition: all 300ms ease;
+}
+.mainMenu li:hover {
+  transform: translateX(3%);
+  background-color: powderblue;
+}
+.snsMenu {
+  align-self: center;
+}
+.snsMenu button {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 24px;
+  text-align: center;
+  color: blueviolet;
+  margin: 10px 2px;
+}
+.showing {
+  transform: translateX(0);
+  padding: 25px;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+@media (max-width: 750px) {
+  .sideBar {
+    width: 100%;
+  }
+} ;
